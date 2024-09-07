@@ -1,0 +1,4 @@
+,company,index,year,km_driven,fuel,seller_type,transmission,owner,mileage,engine,max_power,seats,binned_engine
+0,Skoda,0,2019,2345,Petrol,Dealer,Manual,Second Owner,9876,2500.0,8765,6,1
+1,Honda,1,965,987,Petrol,Dealer,Automatic,Second Owner,876,567.0,876,7,4
+2,Honda,2,965,987,Petrol,Dealer,Automatic,Second Owner,876,567.0,876,7,4

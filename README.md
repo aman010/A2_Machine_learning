@@ -16,3 +16,4 @@ Notebook:-
 
 challanges:- 
 	In runs of mlflow the parameters were default not updated, changes made to the class with tags, specially running regressors will require adding paramer _reg inorder for mlflow to detect the reg class as, the initial changes were made.
+# A2_Machine_learning
