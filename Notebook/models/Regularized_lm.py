@@ -11,7 +11,7 @@ class LinearRegression(object):
     #in this class, we add cross validation as well for some spicy code....
     kfold = KFold(n_splits=3)
             
-    def __init__(self, _names,eta,reg_ ,regularization=False, xaviar = False, lr=0.001 ,method='batch', num_epochs=50, batch_size=50, cv=kfold):
+    def __init__(self, _names,eta,reg ,regularization=False, xaviar = False, lr=0.001 ,method='batch', num_epochs=50, batch_size=50, cv=kfold):
         self.lr         = lr
         self.num_epochs = num_epochs
         self.batch_size = batch_size
@@ -86,7 +86,6 @@ class LinearRegression(object):
                 
                 else:
                     params = {"method": self.method, "lr": self.lr, "reg": type(self).__name__}
-                    print(type(self).__name__)
                     mlflow.log_params(params=params)
                     
                 
@@ -276,7 +275,6 @@ class Lasso(LinearRegression):
     def __init__(self, method, lr, reg_, l, regularization=True):
         self.regularization = LassoPenalty(l)
         super().__init__(self.regularization, lr, method, reg_)
-        print('in, eleastic net')
         #mlflow.log_params(params = {'lr':self.lr, 'l':l,'method':self.method, 'reg':type(self).__name__+str(l)})
 
 class Ridge(LinearRegression):
